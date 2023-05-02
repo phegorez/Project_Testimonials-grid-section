@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* font-family: 'Barlow Semi Condensed', sans-serif; */
+
 /* css reset */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -93,7 +97,7 @@ Note for text colors:
 .container {
     border: 1px solid red;
     display: grid;
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-rows: repeat(2, 32vh);
     grid-template-columns: repeat(4, 30vh);
     grid-template-areas: 
     'block1 block1 block2 block3'
@@ -105,13 +109,66 @@ Note for text colors:
 }
 
 .items {
-    border: 3px solid #374B4A;
+    border: 1px solid #374B4A;
     background-color: #C5FFFD;
+    border-radius: 10px;
 }
 
 .item-1 {
     grid-area: block1;
     background-color: hsl(263, 55%, 52%);
+    display: flex;
+    flex-direction: column;
+    padding: 3vh;
+}
+
+.item-1 .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.item-1 .header .header-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: 2px solid #A775F2;
+    margin-right: 2vh;
+}
+
+.item-1 .header .header-info p:first-child {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.item-1 .header .header-info p:last-child {
+    color: hsl(0, 0%, 81%);
+}
+
+.item-1 .header .item-1-quot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(396%, 176%);
+    z-index: 0;
+}
+
+.item-1 h2 {
+    color: white;
+    margin-bottom: 2vh;
+    z-index: 1;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 2.3vh;
+    line-height: 2.7vh;
+}
+
+.item-1 p {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+    color: hsl(0, 0%, 81%);
+    font-size: 1.52vh;
+    line-height: 2vh;
 }
 
 .item-2 {
