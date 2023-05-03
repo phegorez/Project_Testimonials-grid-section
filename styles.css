@@ -109,26 +109,21 @@ Note for text colors:
 }
 
 .items {
-    border: 1px solid #374B4A;
     background-color: #C5FFFD;
     border-radius: 10px;
-}
-
-.item-1 {
-    grid-area: block1;
-    background-color: hsl(263, 55%, 52%);
     display: flex;
     flex-direction: column;
     padding: 3vh;
 }
 
-.item-1 .header {
+.items .header {
     display: flex;
     align-items: center;
     margin-bottom: 1vh;
+    position: relative;
 }
 
-.item-1 .header .header-img {
+.items .header .header-img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -136,34 +131,26 @@ Note for text colors:
     margin-right: 2vh;
 }
 
-.item-1 .header .header-info p:first-child {
+.items .header .header-info p:first-child {
     color: white;
     margin-bottom: 5px;
 }
 
-.item-1 .header .header-info p:last-child {
+.items .header .header-info p:last-child {
     color: hsl(0, 0%, 81%);
 }
 
-.item-1 .header .item-1-quot {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(396%, 176%);
-    z-index: 0;
-}
-
-.item-1 h2 {
+.items h2 {
     color: white;
     margin-bottom: 2vh;
-    z-index: 1;
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 600;
     font-size: 2.3vh;
     line-height: 2.7vh;
+    z-index: 1;
 }
 
-.item-1 p {
+.items p {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-weight: 500;
     color: hsl(0, 0%, 81%);
@@ -171,9 +158,28 @@ Note for text colors:
     line-height: 2vh;
 }
 
+.item-1 {
+    grid-area: block1;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.item-1 .header .item-1-quot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(345%, -15%);
+    z-index: 0;
+}
+
 .item-2 {
     grid-area: block2;
     background-color: hsl(217, 19%, 35%);
+}
+
+.item-2 .header .header-img {
+    outline: none ;
+    width: 35px;
+    height: 35px;
 }
 
 .item-3 {
@@ -181,9 +187,36 @@ Note for text colors:
     background-color: hsl(0, 0%, 100%);
 }
 
+.white-screen .header .header-img {
+    outline: none ;
+    width: 35px;
+    height: 35px;
+}
+
+.white-screen .header .header-info p:first-child {
+    color: hsl(219, 29%, 14%);
+    margin-bottom: 5px;
+}
+
+.white-screen .header .header-info p:last-child {
+    color: hsl(217, 19%, 35%);
+}
+
+.white-screen h2 {
+    color: hsl(219, 29%, 14%);
+}
+
+.white-screen p {
+    color: hsl(217, 19%, 35%);
+}
+
 .item-4 {
     grid-area: block4;
     background-color: hsl(0, 0%, 100%)
+}
+
+.white-screen {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .item-5 {
