@@ -100,8 +100,8 @@ Note for text colors:
     grid-template-rows: repeat(2, 32vh);
     grid-template-columns: repeat(4, 30vh);
     grid-template-areas: 
-    'block1 block1 block2 block3'
-    'block4 block5 block5 block3';
+    'block1 block1 block2 block5'
+    'block3 block4 block4 block5';
     gap: 20px;
     height: 100vh;
     justify-content: center;
@@ -183,7 +183,7 @@ Note for text colors:
 }
 
 .item-3 {
-    grid-area: block3;
+    grid-area: block5;
     background-color: hsl(0, 0%, 100%);
 }
 
@@ -211,7 +211,7 @@ Note for text colors:
 }
 
 .item-4 {
-    grid-area: block4;
+    grid-area: block3;
     background-color: hsl(0, 0%, 100%)
 }
 
@@ -220,7 +220,15 @@ Note for text colors:
 }
 
 .item-5 {
-    grid-area: block5;
+    grid-area: block4;
     background-color: hsl(219, 29%, 14%);
+}
+
+@media screen and (max-width:400px) {
+    
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
